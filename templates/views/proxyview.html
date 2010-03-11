@@ -1,0 +1,37 @@
+<script type="text/javascript" src="/js/jquery-1.3.min.js"></script>
+<script type="text/javascript" src="/js/yqlgeo.js"></script>
+<style>
+div.placeholdrbar {
+	margin: 0px;
+	height: 20px;
+	background-color: #000;
+	color: #fff;
+	padding: 3px;
+	font-size: 12pt;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+</style>
+<div class="placeholdrbar">
+	<strong>PlaceHoldr</strong> : <span id="location"></span> : <span id="logged"></span>
+</div>
+<script type="text/javascript"> 
+	$('#location').html("hello world");
+	if(navigator.geolocation)
+	{
+		$('#location').html("Looking for location...");
+		navigator.geolocation.getCurrentPosition(function(position){
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+		$('#logged').load("http://test.placeholdr.me/api/mark?url={{url}}&lat="+ lat + "&lon=" + lon);
+		yqlgeo.get(lat,lon,function(place){
+  			$('#location').html("We've placed you in " + place.place.name + " in " + place.place.country.content);
+		});
+	}, function(error) {
+		$('#location').html("We couldn't find you, sorry...");
+	});
+	}
+	else
+	{
+		$('#location').html("Sadly your browser isn't location aware.");
+	}
+</script>
+{{proxied_page}}

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>PlaceHoldr</title>
+   <link rel="stylesheet" href="/css/yui.css" type="text/css">
+   <link rel="stylesheet" href="/css/web.css" type="text/css">
+</head>
+<body>
+<div id="doc" class="yui-t7">
+	<div id="hd" role="banner" class="header">
+		<h1>PlaceHoldr</h1>
+		<div>Because everyone reads something, somewhere on something...</div>
+	</div>
+</div>
+{% block mappanel %}
+{% endblock %}
+<div id="doc" class="yui-t7">
+	<div id="bd" role="main" class="contentbox">
+		<div class="yui-g">
+    		<div class="yui-u first">
+			{% block locationspanel %}
+			{% endblock %}
+	    	</div>
+    		<div class="yui-u">
+			{% block activitypanel %}
+			{% endblock %}
+	    	</div>
+		</div>
+	</div>
+
+	<div id="ft" role="contentinfo" class="footer"><div>PlaceHoldr is an experiment around location and reading based in Stockholm for Bonnier Hackday</div></div>
+</div>
+</body>
+</html>

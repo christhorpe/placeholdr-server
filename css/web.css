@@ -1,0 +1,131 @@
+body {
+	background-color: #fff;
+	color: #333;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", Sans-serif;
+}
+
+img {
+	border: 0px;
+}
+
+p {
+	font-size: 80%;
+}
+
+a {
+	background-color: #eee;
+	padding: 5px;
+	color: #000;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", Sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #ccc;
+	color: #333;
+}
+
+div.header {
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #999;
+	padding: 10px;
+}
+
+div.map {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #999;
+}
+
+div.contentbox {
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #999;
+	padding: 10px;
+}
+
+div.footer {
+	border-top: 1px dotted #ccc;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	padding: 10px;
+}
+
+
+div.sectionlist {
+	font-size: 85%;
+	color: #fff;
+}
+
+div.sectionlist span {
+	padding: 3px;
+}
+
+span.home {
+	background-color: #666;
+}
+
+span.nyheter {
+	background-color: #900;
+}
+
+span.sport {
+	background-color: #990;
+}
+
+span.sthlm {
+	background-color: #f0f;
+}
+
+span.economi {
+	background-color: #309;
+}
+
+span.kultur {
+	background-color: #993;
+}
+
+
+h1 {
+	color: #444;
+	font-size: 300%;
+	padding-top: 15px;
+	letter-spacing: -3px;
+	border-bottom: 1px dotted #ddd;
+	margin-bottom: 5px;
+}
+
+
+h2 {
+	color: #444;
+	font-size: 140%;
+	letter-spacing: -1.4px;
+	border-bottom: 1px dotted #ddd;
+	margin-bottom: 15px;
+}
+
+h3 {
+	color: #666;
+	font-size: 130%;
+	letter-spacing: -1.1px;
+	margin-bottom: 10px;
+}
+
+h4 {
+	color: #777;
+	font-size: 120%;
+	letter-spacing: -1px;
+	margin-bottom: 10px;
+}
+
+h5 {
+	color: #888;
+	font-size: 100%;
+	letter-spacing: -0.7px;
+	margin-bottom: 3px;
+}
+
+div.yui-t7 {
+	background-color: #fff;
+}
+

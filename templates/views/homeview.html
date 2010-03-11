@@ -1,0 +1,47 @@
+{% extends "../ui/base.html" %}
+
+{% block mappanel %}
+
+<div id="cm-example" style="width: 100%; height: 500px" class="map"></div>
+
+<script type="text/javascript" src="http://tile.cloudmade.com/wml/latest/web-maps-lite.js"></script>
+<script type="text/javascript">
+    var cloudmade = new CM.Tiles.CloudMade.Web({key: 'BC9A493B41014CAABB98F0471D759707', styleId:'997'});
+    var map = new CM.Map('cm-example', cloudmade);
+	
+	var myMarkerLatLng1 = new CM.LatLng(59.3340,18.0595);
+	var myMarker1 = new CM.Marker(myMarkerLatLng1, {});
+
+	var myMarkerLatLng2 = new CM.LatLng(59.3319,18.0808);
+	var myMarker2 = new CM.Marker(myMarkerLatLng2, {});
+
+
+    map.setCenter(new CM.LatLng(59.3340,18.0595), 14);
+	map.addOverlay(myMarker1);
+	map.addOverlay(myMarker2);
+
+</script>
+
+{% endblock %}
+
+{% block activitypanel %}
+<h3>Recent activity</h3>
+{% for mark in marks %}
+	<div>{{mark.url}}</div>
+{% endfor %}
+{% endblock%}
+
+{% block locationspanel %}
+<h3>Locations</h3>
+{% for location in locations %}
+	<h5>
+		{{location.lat}},{{location.lon}} [{{location.viewcount}} views]
+	</h5>
+	<div class="sectionlist">
+		{% for section in location.sectionlist %}
+			<span class="{{section}}">{{section}}</span>
+		{% endfor %}
+	</div>
+{% endfor %}
+{% endblock %}
+
