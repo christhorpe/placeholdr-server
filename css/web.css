@@ -34,10 +34,11 @@ div.header {
 
 div.map {
 	border-top: 1px solid #eee;
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid #666;
 }
 
 div.contentbox {
+	border-top: 1px solid #ddd;
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #999;
 	padding: 10px;
@@ -51,10 +52,19 @@ div.footer {
 	padding: 10px;
 }
 
+div.activityrow {
+	padding-bottom: 2px;
+	border-bottom: 1px dotted #aaa;
+	margin-bottom: 5px;
+}
 
 div.sectionlist {
 	font-size: 85%;
 	color: #fff;
+	line-height: 13pt;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #aaa;
+	margin-bottom: 5px;
 }
 
 div.sectionlist span {

@@ -1,8 +1,13 @@
 import os
+import yql
 
 from google.appengine.ext.webapp import template
 
 
+def do_yql(query):
+	y = yql.Public()
+	result = y.execute(query)
+	return result
 
 
 def render_template(self, end_point, template_values):

@@ -1,8 +1,10 @@
 import os
 
 from google.appengine.ext import webapp
+from google.appengine.api.labs import taskqueue
 
 import models
+
 
 class MarkHandler(webapp.RequestHandler):
 	def get(self):
@@ -25,6 +27,7 @@ class MarkHandler(webapp.RequestHandler):
 		if mark.section not in location.sectionlist:
 			location.sectionlist.append(mark.section)
 		location.put()
+		taskqueue.add(url='/actions/activity/process', params={'key': mark.key}, method='GET')
 		self.response.out.write("ok")
 
 

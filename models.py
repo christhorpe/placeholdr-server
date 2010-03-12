@@ -15,4 +15,14 @@ class Mark(db.Model):
 	useragent = db.StringProperty()
 	section = db.StringProperty()
 	created_at = db.DateTimeProperty(auto_now_add=True)
+	processed = db.BooleanProperty(default=False)
+
+
+class Activity(db.Model):
+	mark = db.ReferenceProperty()
+	device = db.StringProperty()
+	title = db.StringProperty()
+	location = db.StringProperty()
+	lockey = db.StringProperty()
+	created_at = db.DateTimeProperty()
 
